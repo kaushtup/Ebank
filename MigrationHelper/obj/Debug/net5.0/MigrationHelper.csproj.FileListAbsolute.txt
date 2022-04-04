@@ -1,0 +1,29 @@
+C:\Users\Dell\source\repos\MigrationHelper\bin\Debug\net5.0\MigrationHelper.deps.json
+C:\Users\Dell\source\repos\MigrationHelper\bin\Debug\net5.0\MigrationHelper.runtimeconfig.json
+C:\Users\Dell\source\repos\MigrationHelper\bin\Debug\net5.0\MigrationHelper.runtimeconfig.dev.json
+C:\Users\Dell\source\repos\MigrationHelper\bin\Debug\net5.0\MigrationHelper.dll
+C:\Users\Dell\source\repos\MigrationHelper\bin\Debug\net5.0\MigrationHelper.pdb
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.AssemblyInfo.cs
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.dll
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\refint\MigrationHelper.dll
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.pdb
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\MigrationHelper.genruntimeconfig.cache
+C:\Users\Dell\source\repos\MigrationHelper\obj\Debug\net5.0\ref\MigrationHelper.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\bin\Debug\net5.0\MigrationHelper.deps.json
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\bin\Debug\net5.0\MigrationHelper.runtimeconfig.json
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\bin\Debug\net5.0\MigrationHelper.runtimeconfig.dev.json
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\bin\Debug\net5.0\MigrationHelper.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\bin\Debug\net5.0\ref\MigrationHelper.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\bin\Debug\net5.0\MigrationHelper.pdb
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.AssemblyInfoInputs.cache
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.AssemblyInfo.cs
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.csproj.CoreCompileInputs.cache
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\ref\MigrationHelper.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.pdb
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.genruntimeconfig.cache
