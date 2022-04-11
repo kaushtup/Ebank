@@ -1,7 +1,38 @@
-﻿@{
-        Layout = "~/Areas/Main/Views/Shared/_Layout.cshtml";
-}
+﻿@model MigrationHelper.ViewModels.ProfileInfo
+
+@{ Layout = "~/Areas/Main/Views/Shared/_Layout.cshtml";
+ }
 
 <h1>
-    This is load fund
+    Profile Information
 </h1>
+
+<form class="mx-1 mx-md-4" asp-action="Login" method="post">
+    <div class="d-flex flex-row align-items-center mb-4">
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label"><b>Username</b></label>
+            @Model.FullName
+        </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label"><b>Account Number</b></label>
+            @Model.AccNum
+        </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label"><b>Account Type</b></label>
+            @Model.AccountType
+        </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label"><b>Balance</b></label>
+            £ @Model.Balance
+        </div>
+    </div>
+</form>

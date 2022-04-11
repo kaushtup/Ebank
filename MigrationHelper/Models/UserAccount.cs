@@ -10,8 +10,8 @@ namespace MigrationHelper.Models
 
         public long AccNum { get; set; }
 
-        [Column(TypeName= "decimal(12,5)")]
-        public decimal Balance { get; set; }
+        //[Column(TypeName= "decimal(12,5)")]
+        public double Balance { get; set; }
 
         public Currency currency { get; set; }
         public int CurrencyId { get; set; }

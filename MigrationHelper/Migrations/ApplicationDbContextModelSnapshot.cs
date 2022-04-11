@@ -51,6 +51,36 @@ namespace MigrationHelper.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MigrationHelper.Models.Rate", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("EUR")
+                        .HasColumnType("int");
+
+                    b.Property<double>("GBP")
+                        .HasColumnType("float");
+
+                    b.Property<double>("USD")
+                        .HasColumnType("float");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Rates");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            EUR = 1,
+                            GBP = 0.83499999999999996,
+                            USD = 1.0880000000000001
+                        });
+                });
+
             modelBuilder.Entity("MigrationHelper.Models.Register", b =>
                 {
                     b.Property<int>("ID")
@@ -91,8 +121,8 @@ namespace MigrationHelper.Migrations
                     b.Property<long>("AccNum")
                         .HasColumnType("bigint");
 
-                    b.Property<decimal>("Balance")
-                        .HasColumnType("decimal(12,5)");
+                    b.Property<double>("Balance")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("CreatDate")
                         .HasColumnType("datetime2");

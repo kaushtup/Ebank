@@ -3,6 +3,9 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using DbHelper;
 using MigrationHelper.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace EbankingApp.Controllers
 {
@@ -42,9 +45,14 @@ namespace EbankingApp.Controllers
 
             if (ModelState.IsValid)
             {
+                var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Name,ClaimTypes.Role);
+                identity.AddClaim(new Claim("Id", user.ID.ToString()));
+
+                var principal = new ClaimsPrincipal(identity);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties { IsPersistent = false });
+
+
                 return RedirectToAction("Index", "Home", new {Area ="Main" });
-
-
             }
             return RedirectToAction("Login");
         }
@@ -67,7 +75,7 @@ namespace EbankingApp.Controllers
                 model.AccountType
                 );
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Login");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

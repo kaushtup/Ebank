@@ -31,10 +31,21 @@ namespace MigrationHelper.Data
                     ID = 3,
                     name = "USD"
                 });
+
+
+            builder.Entity<Rate>().HasData(
+                new Rate
+                {
+                    ID = 1,
+                    EUR = 1,
+                    GBP = 0.835,
+                    USD = 1.088                
+                });
         }
 
         public DbSet<Register> Registers { get; set; }
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<UserAccount> UserAccounts { get; set; }
+        public DbSet<Rate> Rates { get; set; }
     }
 }

@@ -140,7 +140,6 @@ C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -182,3 +181,15 @@ C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\obj\Debug\net5
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\obj\Debug\net5.0\EbankingApp.Views.pdb
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\obj\Debug\net5.0\EbankingApp.csproj.CopyComplete
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\obj\Debug\net5.0\EbankingApp.genruntimeconfig.cache
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.Graph.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.Graph.Core.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\System.Memory.Data.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.Azure.Functions.Extensions.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.Azure.WebJobs.Host.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Microsoft.Azure.WebJobs.dll
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\Ebankingapp-main\bin\Debug\net5.0\Newtonsoft.Json.dll
