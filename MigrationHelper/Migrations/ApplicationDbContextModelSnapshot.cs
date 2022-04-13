@@ -111,6 +111,48 @@ namespace MigrationHelper.Migrations
                     b.ToTable("Registers");
                 });
 
+            modelBuilder.Entity("MigrationHelper.Models.Transaction", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("CurrencyId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("FromAccNum")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("FromUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ToAccNum")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("ToUserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CurrencyId");
+
+                    b.HasIndex("FromUserId");
+
+                    b.HasIndex("ToUserId");
+
+                    b.ToTable("Transactions");
+                });
+
             modelBuilder.Entity("MigrationHelper.Models.UserAccount", b =>
                 {
                     b.Property<int>("ID")
@@ -143,6 +185,33 @@ namespace MigrationHelper.Migrations
                     b.HasIndex("RegisterId");
 
                     b.ToTable("UserAccounts");
+                });
+
+            modelBuilder.Entity("MigrationHelper.Models.Transaction", b =>
+                {
+                    b.HasOne("MigrationHelper.Models.Currency", "currency")
+                        .WithMany()
+                        .HasForeignKey("CurrencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MigrationHelper.Models.Register", "FromUser")
+                        .WithMany()
+                        .HasForeignKey("FromUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MigrationHelper.Models.Register", "ToUser")
+                        .WithMany()
+                        .HasForeignKey("ToUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("currency");
+
+                    b.Navigation("FromUser");
+
+                    b.Navigation("ToUser");
                 });
 
             modelBuilder.Entity("MigrationHelper.Models.UserAccount", b =>

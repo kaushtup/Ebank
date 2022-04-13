@@ -47,5 +47,6 @@ namespace MigrationHelper.Data
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<UserAccount> UserAccounts { get; set; }
         public DbSet<Rate> Rates { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
     }
 }

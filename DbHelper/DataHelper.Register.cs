@@ -47,5 +47,10 @@ namespace DbHelper
         {
             return (await new Repository<Register>(contxt).FindByIdAsync(id));
         }
+
+        public async Task<Register> GetUserByAccountNumberAsync(long accountNumber)
+        {
+            return (await new Repository<Register>(contxt).FindAsync(x => x.AccNum == accountNumber)).FirstOrDefault();
+        }
     }
 }

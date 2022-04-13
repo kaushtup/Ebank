@@ -27,3 +27,4 @@ C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\ref\MigrationHelper.dll
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.pdb
 C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.genruntimeconfig.cache
+C:\Users\Kaushtup Bista\Desktop\Ebankingapp-main\MigrationHelper\obj\Debug\net5.0\MigrationHelper.csproj.AssemblyReference.cache

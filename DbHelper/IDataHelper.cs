@@ -14,6 +14,8 @@ namespace DbHelper
         Task<List<Register>> GetUsersAsync();
 
         Task<Register> GetUserByIdAsync(int id);
+
+        Task<Register> GetUserByAccountNumberAsync(long accountNumber);
         #endregion
 
         #region login
@@ -35,6 +37,12 @@ namespace DbHelper
            int currencyId, DateTime currentDate, string remark);
 
         Task<List<UserAccount>> GetUserAccountByIdAsync(int userid);
+        #endregion
+
+        #region transaction
+        Task<bool> AddTransaction(int fromUserId,int toUserId, long fromAccNo,
+           long toAccNo, double amount, string remark, int currencyId);
+
         #endregion
     }
 }

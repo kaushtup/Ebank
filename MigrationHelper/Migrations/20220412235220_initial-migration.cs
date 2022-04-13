@@ -54,6 +54,44 @@ namespace MigrationHelper.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Transactions",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FromUserId = table.Column<int>(type: "int", nullable: false),
+                    ToUserId = table.Column<int>(type: "int", nullable: false),
+                    FromAccNum = table.Column<long>(type: "bigint", nullable: false),
+                    ToAccNum = table.Column<long>(type: "bigint", nullable: false),
+                    Amount = table.Column<double>(type: "float", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Remarks = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CurrencyId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Transactions", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Transactions_Currencies_CurrencyId",
+                        column: x => x.CurrencyId,
+                        principalTable: "Currencies",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Transactions_Registers_FromUserId",
+                        column: x => x.FromUserId,
+                        principalTable: "Registers",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Transactions_Registers_ToUserId",
+                        column: x => x.ToUserId,
+                        principalTable: "Registers",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UserAccounts",
                 columns: table => new
                 {
@@ -99,6 +137,21 @@ namespace MigrationHelper.Migrations
                 values: new object[] { 1, 1, 0.83499999999999996, 1.0880000000000001 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Transactions_CurrencyId",
+                table: "Transactions",
+                column: "CurrencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transactions_FromUserId",
+                table: "Transactions",
+                column: "FromUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transactions_ToUserId",
+                table: "Transactions",
+                column: "ToUserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UserAccounts_CurrencyId",
                 table: "UserAccounts",
                 column: "CurrencyId");
@@ -113,6 +166,9 @@ namespace MigrationHelper.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Rates");
+
+            migrationBuilder.DropTable(
+                name: "Transactions");
 
             migrationBuilder.DropTable(
                 name: "UserAccounts");
