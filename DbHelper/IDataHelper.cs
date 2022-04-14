@@ -43,6 +43,10 @@ namespace DbHelper
         Task<bool> AddTransaction(int fromUserId,int toUserId, long fromAccNo,
            long toAccNo, double amount, string remark, int currencyId);
 
+        Task<List<Transaction>> GetTransactionByFromUserIdAsync(int id);
+
+        Task<List<Transaction>> GetTransactionByToUserIdAsync(int id);
+
         #endregion
     }
 }

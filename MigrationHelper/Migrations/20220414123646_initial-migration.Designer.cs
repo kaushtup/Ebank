@@ -10,7 +10,7 @@ using MigrationHelper.Data;
 namespace MigrationHelper.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220412235220_initial-migration")]
+    [Migration("20220414123646_initial-migration")]
     partial class initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

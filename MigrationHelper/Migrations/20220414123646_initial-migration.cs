@@ -112,13 +112,13 @@ namespace MigrationHelper.Migrations
                         column: x => x.CurrencyId,
                         principalTable: "Currencies",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_UserAccounts_Registers_RegisterId",
                         column: x => x.RegisterId,
                         principalTable: "Registers",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.InsertData(

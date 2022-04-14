@@ -1,5 +1,6 @@
 ﻿using MigrationHelper.Models;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DbHelper
@@ -62,5 +63,16 @@ namespace DbHelper
                 throw;
             }
         }
+
+        public async Task<List<Transaction>> GetTransactionByFromUserIdAsync(int id)
+        {
+            return ((List<Transaction>)await new Repository<Transaction>(contxt).FindAsync(x => x.FromUserId == id));
+        }
+
+        public async Task<List<Transaction>> GetTransactionByToUserIdAsync(int id)
+        {
+            return ((List<Transaction>)await new Repository<Transaction>(contxt).FindAsync(x => x.ToUserId == id));
+        }
+
     }
 }

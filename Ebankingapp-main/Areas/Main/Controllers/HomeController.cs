@@ -6,6 +6,7 @@ using MigrationHelper.Models;
 using MigrationHelper.ViewModels;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
@@ -58,8 +59,7 @@ namespace EbankingApp.Areas.Main.Controllers
             var userAccountData = await _Helper.GetUserAccountByIdAsync(data.ID);
             var rateData = await _Helper.GetRate();
 
-
-            //use api to convert currecny
+            //use api to convert currency
             double balance = 0;
             foreach (var item in userAccountData)
             {
@@ -78,7 +78,7 @@ namespace EbankingApp.Areas.Main.Controllers
                 }
             }
 
-            //need to change balance after transaction
+
 
             var model = new ProfileInfo()
             {
@@ -120,9 +120,71 @@ namespace EbankingApp.Areas.Main.Controllers
         }
 
         [HttpGet]
-        public IActionResult Transaction()
+        public async Task<IActionResult> Transaction()
         {
-            return View();
+            var userId = _httpContAccessor.HttpContext.User.FindFirstValue("Id");
+            var data = await _Helper.GetUserByIdAsync(Convert.ToInt32(userId));
+
+            var dataFromUser = await _Helper.GetTransactionByFromUserIdAsync(Convert.ToInt32(userId));
+            var dataToUser = await _Helper.GetTransactionByToUserIdAsync(Convert.ToInt32(userId));
+
+            var list = new List<TransactionAmountViewModel>();
+
+            foreach (var item in dataFromUser)
+            {
+                var d = await _Helper.GetUserByIdAsync(item.ToUserId);
+
+                var model = new TransactionAmountViewModel();
+
+                model.AccNum = d.AccNum;
+                model.AccountType = d.AccountType;
+                model.Name = d.Firstname + d.Lastname;
+                model.Balance = item.Amount;
+                model.SendStatus = true;
+
+                string cur = "£";
+                if(item.CurrencyId == 2) 
+                {
+                    cur = "EUR";
+                }
+                else if(item.CurrencyId == 3) 
+                {
+                    cur = "$";
+                }
+
+                model.Currency = cur;
+
+                list.Add(model);
+            }
+
+            foreach (var item in dataToUser)
+            {
+                var d = await _Helper.GetUserByIdAsync(item.FromUserId);
+
+                var model = new TransactionAmountViewModel();
+
+                model.AccNum = d.AccNum;
+                model.AccountType = d.AccountType;
+                model.Name = d.Firstname + d.Lastname;
+                model.Balance = item.Amount;
+                model.SendStatus = false;
+
+                string cur = "£";
+                if (item.CurrencyId == 2)
+                {
+                    cur = "EUR";
+                }
+                else if (item.CurrencyId == 3)
+                {
+                    cur = "dollar";
+                }
+
+                model.Currency = cur;
+
+                list.Add(model);
+            }
+
+            return View(list);
         }
 
         [HttpGet]
